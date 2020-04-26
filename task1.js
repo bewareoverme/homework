@@ -13,6 +13,9 @@ function after_half_one(arr) {
         if(index > (half_arr - 1)) {
             arr[index] = 0
         }
+        if(index < (half_arr - 1)) {
+            arr[index] = 1
+        }
         index++;
     }
     return arr
