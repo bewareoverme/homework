@@ -11,14 +11,14 @@ function after_half_one(arr) {
     let index = 0;
     while (index < lengh_arr) {
         if(index > (half_arr - 1)) {
-            arr[index] = 0
+            arr[index] = 0;
         }
         if(index < (half_arr - 1)) {
-            arr[index] = 1
+            arr[index] = 1;
         }
         index++;
     }
-    return arr
+    return arr;
     
 }
 console.log(after_half_one([1,2,3,4,5,5,5,5,5,5,5,5,7,1]))
