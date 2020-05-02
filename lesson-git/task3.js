@@ -6,6 +6,9 @@ function task3(pairs) {
             para[0] = para[1]
             para[1] = val
         }
+        if (para[0] % 2 != 0) {
+            para[0] = para[0] * 2
+        }
     }
     return massiv
 

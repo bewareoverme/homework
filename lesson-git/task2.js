@@ -6,7 +6,7 @@ function unique(arr) {
         result.push(str);
       }
     }
-    return result.length
+    return result.length;
 }
 
 console.log(unique(['aa','bb','aa','c']))
