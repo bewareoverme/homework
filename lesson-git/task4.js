@@ -1,17 +1,20 @@
 function count_sym(str, sym) {
-    let arr = [];
     let counter = 0;
-    let arr_symb = str.split('')
-    console.log(arr_symb)
-    for (let index in arr_symb) {
-         if (arr_symb[index] === "m") {
+    let currentMax = 0;
+
+    for (let index = 0; index < str.length; index++) {
+         if (str[index] === sym) {
              counter++;
+
+             if (counter > currentMax) {
+                 currentMax = counter;
+             }
          } else {
-             arr.push(counter);
              counter = 0;
          }
     }
-    console.log(arr);
-    return Math.max.apply(null, arr);
+
+    return currentMax;
 }
+
 console.log(count_sym("skrmsor o mmm or l mm som4mmmmm", "m"))
