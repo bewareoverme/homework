@@ -1,34 +1,34 @@
 function spiral(n) {
     let result = new Array(n).fill().map(() => new Array(n).fill(""));
     let counter = 1;
-    let startRaw = 0;
-    let endRaw = n - 1;
+    let startRow = 0;
+    let endRow = n - 1;
     let startCol = 0;
     let endCol = n - 1;
     
 
-    while (startRaw <= endRaw && startCol <= endCol) {
+    while (startRow <= endRow && startCol <= endCol) {
         for (let i = startCol; i <= endCol; i++) {
-            result[startRaw][i] = counter;
+            result[startRow][i] = counter;
             counter++;
         }
-        startRaw++
+        startRow++;
 
-        for (let j = startRaw; j <= endRaw; j++) {
+        for (let j = startRow; j <= endRow; j++) {
             result[j][endCol] = counter;
-            counter++
+            counter++;
         }
-        endCol--
+        endCol--;
 
         for (let i = endCol; i >= startCol; i--) {
-            result[endRaw][i] = counter;
-            counter++
+            result[endRow][i] = counter;
+            counter++;
         }
-        endRaw--
+        endRow--;
 
-        for (let i = endRaw; i >= startRaw; i--) {
+        for (let i = endRow; i >= startRow; i--) {
             result[i][startCol] = counter;
-            counter++
+            counter++;
         }
         startCol++;
     }
