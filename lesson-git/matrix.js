@@ -1,13 +1,14 @@
-const result = [];
-const n = 6;
-for (let i = 0; i < n; i++) {
-	result[i] = [];
-	
-    for (let j = 0; j < n; j++) {
-        result[i][j] = calculateValue(i,j,n);
-    }
+function matrix(n) {
+	const result = []
+	for (let i = 0; i < n; i++) {
+		result[i] = [];
+		
+		for (let j = 0; j < n; j++) {
+			result[i][j] = calculateValue(i,j,n);
+		}
+	}
+	return result;
 }
-
 
 function calculateValue(i,j,n) {
 	if (n <= 2) {
@@ -32,4 +33,4 @@ function calculateValue(i,j,n) {
 
 }
 
-console.log(result)
+console.log(matrix(6))
